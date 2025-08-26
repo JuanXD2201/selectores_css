@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejemplo Selectores CSS Suave</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Demostración Selectores CSS</h1>
+    </header>
+
+    <!-- Selectores de atributos -->
+    <section id="atributos">
+        <h2>Selectores de Atributos</h2>
+        <input type="text" placeholder="Input tipo texto" />
+        <input type="email" placeholder="Input tipo email" />
+        <input type="checkbox" checked /> Checkbox checked
+        <input type="checkbox" /> Checkbox no checked
+        <br />
+        <a href="https://example.com" target="_blank">Enlace con target</a> <br />
+        <a href="#atributos">Enlace sin target</a>
+        <br />
+        <button disabled>Botón deshabilitado</button>
+        <button>Botón habilitado</button>
+    </section>
+
+    <!-- Pseudo-clases y pseudo-elementos -->
+    <section id="pseudo">
+        <h2>Pseudo-clases y Pseudo-elementos</h2>
+        <ul>
+            <li>Primer item</li>
+            <li>Segundo item</li>
+            <li>Especial item</li>
+            <li>Cuarto item</li>
+        </ul>
+        <p class="resaltado">Este párrafo tiene un ::before y ::after</p>
+        <p>Un párrafo normal</p>
+        <a href="#">Enlace para hover y focus</a>
+    </section>
+
+    <!-- Combinadores -->
+    <section id="combinadores">
+        <h2>Combinadores</h2>
+        <div class="contenedor">
+            <p>Primer párrafo</p>
+            <p>Segundo párrafo (hermano adyacente)</p>
+            <div>
+                <p>Este párrafo es nieto</p>
+            </div>
+        </div>
+        <p>Siguiente hermano general</p>
+    </section>
+
+</body>
+</html>

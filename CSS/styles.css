@@ -1,0 +1,209 @@
+/* Reset básico y tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 0 15px;
+}
+
+/* Encabezados */
+header h1 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Secciones */
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #666;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===== Selectores de atributos ===== */
+
+/* input tipo texto */
+input[type="text"] {
+    border: 1.5px solid #aaccee;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f0f7ff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"] {
+    border: 1.5px solid #aaddcc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f5fff8;
+    transition: border-color 0.3s ease;
+}
+
+/* Checkbox checked */
+input[type="checkbox"]:checked {
+    accent-color: #88bbee;
+    cursor: pointer;
+}
+
+/* Checkbox no checked */
+input[type="checkbox"]:not(:checked) {
+    accent-color: #bbb;
+    cursor: pointer;
+}
+
+/* enlaces con target */
+a[target] {
+    color: #5a8fbc;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid #5a8fbc;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a[target]:hover {
+    color: #3b5a81;
+    border-color: #3b5a81;
+}
+
+/* botones */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* botones deshabilitados */
+button[disabled] {
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* botones habilitados */
+button:not([disabled]) {
+    background: #6c9bd1;
+    color: white;
+}
+
+button:not([disabled]):hover {
+    background: #4d7bb7;
+}
+
+/* ===== Pseudo-clases y pseudo-elementos ===== */
+
+/* li primero */
+#pseudo ul li:first-child {
+    font-weight: 700;
+    color: #7a9cc6;
+}
+
+/* li en posición par */
+#pseudo ul li:nth-child(even) {
+    background: #f2f6fb;
+}
+
+/* li especial con pseudo-clase :last-child */
+#pseudo ul li:last-child {
+    font-style: italic;
+    color: #999;
+}
+
+/* párrafo resaltado con ::before y ::after */
+p.resaltado {
+    position: relative;
+    background: #e0efff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+p.resaltado::before {
+    content: "[";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5a8fbc;
+    font-weight: 700;
+}
+
+p.resaltado::after {
+    content: "]";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5a8fbc;
+    font-weight: 700;
+}
+
+/* enlace con hover y focus */
+#pseudo a {
+    color: #5a8fbc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#pseudo a:hover,
+#pseudo a:focus {
+    color: #3b5a81;
+    outline: none;
+    text-decoration: underline;
+}
+
+/* input focus */
+input:focus {
+    border-color: #5a8fbc;
+    outline: none;
+}
+
+/* ===== Combinadores ===== */
+
+/* hijo directo > */
+.contenedor > p {
+    background: #dceefc;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: #264d73;
+}
+
+/* descendiente (espacio) */
+.contenedor p {
+    font-style: italic;
+}
+
+/* hermano adyacente + */
+p + p {
+    border-top: 1px solid #cdd7e0;
+    padding-top: 10px;
+}
+
+/* hermano general ~ */
+.contenedor ~ p {
+    background: #f0f4f8;
+    padding: 10px;
+    border-radius: 6px;
+    color: #556677;
+}
